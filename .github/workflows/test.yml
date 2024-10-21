@@ -13,4 +13,4 @@ jobs:
       - name: Get Deployment Context
         run: |
           echo "Deploying to environment: ${{ toJson(github) }}"
-          echo "Job name: ${{ job.deploy.environment }}"
+          echo "Job name: ${{ toJson(job)}}"
