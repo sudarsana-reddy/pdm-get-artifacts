@@ -1,0 +1,16 @@
+name: Deployment Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production  # Specify your environment here
+    steps:
+      - name: Get Deployment Context
+        run: |
+          echo "Deploying to environment: ${{ github.event.environment }}"
+          echo "Job name: ${{ job.name }}"
