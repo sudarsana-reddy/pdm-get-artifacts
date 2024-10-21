@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Get Deployment Context
         run: |
-          echo "Deploying to environment: ${{ github.event.environment }}"
+          echo "Deploying to environment: ${{ toJson(github) }}"
           echo "Job name: ${{ job.name }}"
