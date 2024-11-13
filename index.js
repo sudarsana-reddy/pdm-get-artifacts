@@ -108,4 +108,11 @@ async function getToken() {
     return data.access_token;
 }
 
+function insecurePassword() {
+    // BAD: the random suffix is not cryptographically secure
+    var suffix = Math.random();
+    var password = "myPassword" + suffix;
+    return password;
+}
+
 runTask();
